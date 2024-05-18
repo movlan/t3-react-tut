@@ -5,10 +5,10 @@
 - [x] Make it deploy
 - [x] Scaffold basic UI with mock data
 - [x] Tidy up build process
-- [X] Actually set up a database
-- [X] Attach database to UI
-- [X] Add authentication
-- [ ] Add image upload
+- [x] Actually set up a database
+- [x] Attach database to UI
+- [x] Add authentication
+- [x] Add image upload
 - [ ] "taint" (server only)
 - [ ] Use Next/Image component
 - [ ] Error management (w/ Sentry)
