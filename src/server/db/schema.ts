@@ -18,12 +18,13 @@ import {
  */
 export const createTable = pgTableCreator((name) => `t3-tut_${name}`);
 
-export const image = createTable(
+export const images = createTable(
   "image",
   {
     id: serial("id").primaryKey(),
     name: varchar("name", { length: 256 }).notNull(),
     url: varchar("url", { length: 1024 }).notNull(),
+    userId: varchar("userId", { length: 256 }).notNull(),
     createdAt: timestamp("created_at")
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
@@ -31,5 +32,5 @@ export const image = createTable(
   },
   (example) => ({
     nameIndex: index("name_idx").on(example.name),
-  })
+  }),
 );
