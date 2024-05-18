@@ -27,8 +27,8 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-    <html lang="en">
-    <NextSSRPlugin
+      <html lang="en">
+        <NextSSRPlugin
           /**
            * The `extractRouterConfig` will extract **only** the route configs
            * from the router to prevent additional information from being
@@ -37,11 +37,13 @@ export default function RootLayout({
            */
           routerConfig={extractRouterConfig(ourFileRouter)}
         />
-      <body className={`font-sans ${inter.variable} flex flex-col gap-4`}>
-        <TopNav />
-        {children}
-      </body>
-    </html>
+        <body className={`font-sans ${inter.variable} flex flex-col gap-4`}>
+          {/* <div className="grid h-screen grid-rows-[auto,1fr]"> */}
+            <TopNav />
+            {children}
+          {/* </div> */}
+        </body>
+      </html>
     </ClerkProvider>
   );
 }
