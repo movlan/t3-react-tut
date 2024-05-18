@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { db } from "~/server/db";
 
+// to tell nextjs that this page is dynamic
 export const dynamic = "force-dynamic";
 
 const mockUrls = [
