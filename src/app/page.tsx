@@ -1,6 +1,6 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
-import { db } from "~/server/db";
+import Link from "next/link";
 import { getMyImages } from "~/server/queries";
 
 // to tell nextjs that this page is dynamic
@@ -13,8 +13,10 @@ const Images = async () => {
     <div className="flex flex-wrap justify-center gap-4 p-4">
       {images.map((image) => (
         <div key={image.id} className="flex flex-col w-48 h-48">
-          <Image src={image.url} width={198} height={198} alt="image" />
-          <div>{image.name}</div>
+          <Link href={`/img/${image.id}`}>
+            <Image src={image.url} width={198} height={198} alt="image" />
+            <div>{image.name}</div>
+          </Link>
         </div>
       ))}
     </div>
