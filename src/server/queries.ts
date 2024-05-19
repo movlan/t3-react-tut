@@ -38,3 +38,6 @@ export async function getImage(id: number) {
 
   return image;
 }
+
+export async function deleteImage(id: number) {
+}
